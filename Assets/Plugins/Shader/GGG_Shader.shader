@@ -1,4 +1,4 @@
-﻿Shader "Custom/Grand Geo Grass"
+Shader "Custom/Grand Geo Grass"
 {
     Properties
     {
@@ -17,6 +17,8 @@
 		[Toggle(FEATURE_WIND)] _featureWind ("Wind", int) = 0
 		[ShowIf(FEATURE_WIND)] _WindTex("Wind Texture", 2D) = "white" {}
 		[ShowIf(FEATURE_WIND)][HDR] _WindColor("Wind Color", Color) = (0,0,0,1)
+		_WindData("Direction(X,Y) Speed(Z) Intensity(W)", Vector) = (1,1,0.01,1)
+
 
 		[Header(LIGHTING)]
 		_Shininess("Specular shininess", float) = 10
